@@ -1,0 +1,82 @@
+.overlay {
+  margin-top: 50px;
+  padding: 20px;
+  position: fixed;
+  z-index: 1000;
+  background: rgb(255, 255, 255);
+  border: 1px solid #ffffff;
+  box-shadow: 5px 8px 20px rgba(0, 0, 0, 01);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .entete {
+    text-align: center;
+
+    h2, h3 {
+      margin: 0;
+    }
+
+    #absence {
+      background-color: lightcoral;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: red;
+      }
+    }
+
+    #congé {
+      background-color: lightgreen;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: green;
+      }
+    }
+  }
+
+  form {
+    mat-form-field {
+      width: 100%;
+    }
+
+    mat-checkbox {
+      margin: 10px 0;
+    }
+  }
+
+  [mat-dialog-actions] {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    button {
+      color: #000000;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #2b3f40;
+        color: white;
+      }
+    }
+    #envoyer {
+      background-color: #5454ff;
+      &:hover {
+        background-color: blue;
+      }
+      &:disabled{
+        background: #afafaf;
+        color: #9a9999;
+      }
+    }
+    #fermer {
+      background-color: #f0da80;
+      &:hover {
+        background-color: #ffb700;
+      }
+    }
+
+  }
+}
+

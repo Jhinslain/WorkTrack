@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div class="login-box">
+      <img src="assets/TURCAN_Logo.png" class="logo">
+      <h2>Login</h2>
+      <form (ngSubmit)="login()">
+        <div class="form-group user-box">
+          <label for="login">Login</label>
+          <input type="text" class="form-control" id="login" [(ngModel)]="user.login" name="login" required>
+        </div>
+        <div class="form-group user-box">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Se connecter</button>
+      </form>
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+    </div>
+  </div>

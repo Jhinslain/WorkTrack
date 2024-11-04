@@ -1,0 +1,34 @@
+<div class="overlay">
+  <div class="entete">
+    <h2>{{schedule.firstName}} - {{schedule.date  | date:'fullDate'}}</h2>
+  </div>
+    <table>
+      <tr><th>Temps de trajet</th><td>{{schedule.travel_time}} heures</td></tr>
+      <tr><th>Chargement</th><td>{{schedule.load_status === true ? 'oui' : 'non'}}</td></tr>
+      <tr><th>Déchargement</th><td>{{schedule.unload_status === true ? 'oui' : 'non'}}</td></tr>
+      <tr><th>Heure d'arrivée</th><td>{{schedule.arrival_time}} h</td></tr>
+      <tr><th>Heure de départ</th><td>{{schedule.departure_time}} h </td></tr>
+      <tr><th>Temps de pause</th><td>{{schedule.break_time}} minutes</td></tr>
+      <tr><th>Panier</th><td>{{schedule.panier === true ? 'oui' : 'non'}}</td></tr>
+      <tr><th>Grand Deplacement</th><td>{{schedule.grand_deplacement === true ? 'oui' : 'non'}}</td></tr>
+      <tr><th>Lieu</th><td>{{schedule.work_location}}</td></tr>
+      <tr><th>Temps de travail du jour</th><td>{{schedule.total_work_time}}  heures</td></tr>
+      <tr><th>Commentaire</th><td>{{schedule.commentaire}} </td></tr>
+      <tr><th></th><td></td></tr>
+      <tr [ngClass]="{'validated': schedule.validated, 'not-validated': !schedule.validated}">
+        <th>Validé par l'administrateur</th><td>{{schedule.validated === true ? 'oui' : 'non'}}</td>
+      </tr>
+
+    </table>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close id="fermer">Fermer</button>
+  <!--    <button mat-button mat-dialog-close (click)="openModifySchedule()" id="modifier">Modifier</button>-->
+      <button mat-button mat-dialog-close (click)="deleteEvent() " id="supprimer">Supprimer</button>
+      <button mat-button mat-dialog-close *ngIf="role === 'administrateur'" (click)="validateEvent() " id="valide"> Validé</button>
+    </div>
+
+</div>
+
+
+
+

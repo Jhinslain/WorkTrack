@@ -1,0 +1,76 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  padding: 8px;
+}
+td {
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #3a4f50;
+}
+
+h2{
+  background-color: #3a4f50;
+  text-align: center;
+}
+.schedule-day{
+  background: #1b2223;
+  margin-top: 50px;
+  padding: 20px;
+  position: fixed;
+  z-index: 1000;
+  width: 50%; /* you can adjust this as per your need */
+  height: 80%; /* you can adjust this as per your need */
+  top: 10%; /* centers dialog vertically */
+  right:25%;
+  border: 1px solid #ffffff;
+  box-shadow: 5px 8px 20px rgba(0, 0, 0, 01);
+  color:#f4fefd;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10%;
+
+  button {
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+    }
+  }
+
+  #fermer {
+    background-color: #ff0000;
+    color: #fff;
+
+    &:hover {
+      background-color: #ff3333;
+    }
+  }
+
+  #modifier {
+    background-color: #00ff00;
+    color: #fff;
+
+    &:hover {
+      background-color: #33ff33;
+    }
+  }
+
+  #supprimer {
+    background-color: #0000ff;
+    color: #fff;
+
+    &:hover {
+      background-color: #3333ff;
+    }
+  }
+}
+
+

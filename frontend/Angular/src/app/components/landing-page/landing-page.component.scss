@@ -1,0 +1,30 @@
+bode{
+  margin:0px;
+  padding: 0px;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #1b2223;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+  }
+
+  .login-overlay {
+    position: absolute;
+    z-index: 2;
+  }
+}

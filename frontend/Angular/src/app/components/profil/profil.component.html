@@ -1,0 +1,13 @@
+<div class="container profile-container" *ngIf="user">
+  <div class="profile-card">
+    <img src="assets/TURCAN_Logo.png" class="profile-picture">
+    <h2>{{user.firstName}} {{user.lastName}}</h2>
+    <div class="profile-details">
+      <p><strong>Login:</strong> {{ user.login }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Password:</strong> ••••••••</p>
+      <p><strong>Role:</strong> {{ user.role }}</p>
+    </div>
+    <button class="btn btn-danger" (click)="logout()">Déconnexion</button>
+  </div>
+</div>

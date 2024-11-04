@@ -1,0 +1,82 @@
+.overlay {
+  margin-top: 50px;
+  padding: 20px;
+  position: fixed;
+  z-index: 1000;
+  background: rgb(255, 255, 255);
+  border: 1px solid #ffffff;
+  box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .entete {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h2, h3 {
+      margin: 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+      padding: 8px;
+    }
+
+    td {
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  }
+
+  [mat-dialog-actions] {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    button {
+      color: #000000;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #2b3f40;
+        color: white;
+      }
+    }
+
+    #supprimer {
+      background-color: lightcoral;
+      &:hover {
+        background-color: red;
+      }
+    }
+    #fermer {
+      background-color: #f0da80;
+      &:hover {
+        background-color: #ffb700;
+      }
+    }
+    #valide {
+      background-color: #80f086;
+      &:hover {
+        background-color: #67f123;
+      }
+    }
+  }
+}
+
+.validated {
+  background: lightgreen;
+}
+
+.not-validated {
+  background: red;
+}

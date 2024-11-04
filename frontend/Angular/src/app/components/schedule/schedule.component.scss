@@ -1,0 +1,56 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  color: black;
+}
+
+th, td {
+  text-align: left;
+  width: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #969696;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;  // Changer la couleur de fond au besoin
+  border: 1px solid #ddd;  // Changer la couleur de bordure au besoin
+  border-radius: 10px;  // Bordures arrondies pour un look moderne
+  padding: 10px;
+  margin: 20px;  // Ajouter des marges au besoin
+
+  h2 {
+    margin: 0;  // Enlève l'espacement par défaut autour du h2
+    font-size: 1.5em;  // Taille de la police du h2
+    text-align: center;  // Centrer le texte dans le h2
+  }
+}
+
+h2 {
+  margin: 0; // Enlève l'espacement par défaut autour du h2
+  text-align: center; // Centrer le texte dans le h2
+
+  // Styliser l'élément d'id "total_work_hours"
+  .nombre_afficher {
+    display: inline-block; // pour appliquer padding et border
+    color: blue; // Changer la couleur de texte au besoin
+    border: 2px solid blue; // Changer la couleur de bordure au besoin
+    border-radius: 5px; // Bordures arrondies pour un look moderne
+    padding: 5px;
+    margin-left: 10px; // Espace entre le texte et le chiffre
+    font-size: 1em
+  }
+
+}
+
+.calendar-container{
+  margin:20px;
+}

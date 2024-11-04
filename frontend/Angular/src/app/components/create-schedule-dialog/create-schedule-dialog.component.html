@@ -1,0 +1,39 @@
+<div class="overlay">
+  <div class="entete">
+    <h2>Ajouter un nouvel horaire</h2>
+    <h3>{{date}}</h3>
+    <br>
+    <button mat-button mat-dialog-close id="absence" (click)="addScheduleAbsence()">Absence</button>
+    <button mat-button mat-dialog-close id="congé" (click)="addScheduleConge()">Congé</button>
+  </div>
+  <form [formGroup]="scheduleForm" mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Temps de voyage" formControlName="travel_time">
+    </mat-form-field>
+    <mat-checkbox formControlName="load_status">Chargement</mat-checkbox>
+    <mat-checkbox formControlName="unload_status">Déchargement</mat-checkbox>
+    <mat-form-field>
+      <input matInput placeholder="Heure d'arrivée" formControlName="arrival_time">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Heure de départ" formControlName="departure_time">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Temps de pause (min)" formControlName="break_time">
+    </mat-form-field>
+    <mat-checkbox formControlName="panier">Panier</mat-checkbox>
+    <mat-checkbox formControlName="grand_deplacement">Grand déplacement</mat-checkbox>
+    <mat-form-field>
+      <input matInput placeholder="Lieu de travail" formControlName="work_location">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Commentaire" formControlName="commentaire">
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close id="fermer">Fermer</button>
+    <button mat-button [mat-dialog-close]="true" [disabled]="scheduleForm.invalid" (click)="createSchedule()" id="envoyer">Créer l'horaire</button>
+  </div>
+
+</div>
+

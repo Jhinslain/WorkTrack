@@ -1,0 +1,83 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b2223;
+  max-width: 100%;
+}
+
+.logo {
+  display: block;
+  max-width: 120px;
+  margin: 0 auto 20px auto;
+}
+
+.login-box {
+  position: relative;
+  width: 28rem;
+  height: auto;
+  background: #3a4f50;
+  color: #f4fefd;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgb(27, 34, 35);
+  padding: 40px 40px;
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 20px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #f4fefd;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #f4fefd;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+
+.login-box button {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #fbba00;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+
+  &:hover {
+    background: #fbba00;
+    color: #fff;
+    box-shadow: 0 0 5px #fbba00,
+    0 0 25px #fbba00,
+    0 0 50px #fbba00,
+    0 0 100px #fbba00;
+  }
+}

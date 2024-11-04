@@ -1,0 +1,6 @@
+<div class="container">
+  <video *ngIf="(isLoggedInval2$ | async)"autoplay muted loop id="backgroundVideo">
+    <source src="../assets/video_fond.mp4" type="video/mp4">
+  </video>
+  <app-login *ngIf="!(isLoggedInval2$ | async)" class="login-overlay"></app-login>
+</div>
